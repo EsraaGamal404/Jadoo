@@ -11,25 +11,30 @@
     <link rel="stylesheet" href="assets/styles/main.css" />
   </head>
   <body>
-    <section class="container">
-    <header class="header">
-      <a href="index.html"><img src="assets/icons/Logo.webp" alt="logo web"></a>
-      <nav class="navbar">
-        <ul>
-          <li><a class="active" href="#">Desitnations</a></li>
-          <li><a href="#">Hotels</a></li>
-          <li><a href="#">Flights</a></li>
-          <li><a href="#">Bookings</a></li>
-          <li><a href="#">Login</a></li>
-          <li><a class="sign up" href="#">Sign up</a></li>
-          <li><select name="EN">
-           <option>EN</option></select></li>
-        </ul>
-      </nav>
-      <i id="btnmenu" class="fa-solid fa-bars menu"></i>
+    <header>
+      <div class="container">
+      <div class="logo">
+        <a href="index.html"><img src="assets/icons/Logo.webp" alt="logo web"></a>
+      </div>
+        <nav>
+          <label for="toggle"><i class="fa-solid fa-bars menu"></i></label>
+          <input type="checkbox" id="toggle">
+          <ul>
+            <li><a href="#">Desitnations</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a class="sign up" href="#">Sign up</a></li>
+            <li><select name="EN">
+             <option>EN</option></select></li>
+          </ul>
+        </nav>
+        </div>
     </header>
-    </section>
-     <section class="hero">
+    <main>
+      <section class="hero">
+        <div class="container">
       <div class="about">
      <p>Best Destinations around the world</p>
      <h1>Travel,<span>enjoy</span><br>
@@ -46,8 +51,10 @@
         <img src="assets/images/hero.webp" alt="hero web">
        <img class="background" src="assets/images/blob.webp" alt="blob web">
       </div>
+      </div>
     </section>
-   <section class="services">
+    <section class="services">
+      <div class="container">
     <div class="info">
     <span>CATEGORY</span>
     <h2>We Offer Best Services</h2>
@@ -76,13 +83,15 @@
       <p>We deliver outsourced <br> aviation services for <br> military customers</p>
       </div>
   </div>
+  </div>
   </section>
-   <section class="Destinations">
+    <section class="Destinations">
+      <div class="container">
     <div class="info">
       <span>Top Selling</span>
       <h2>Top Destinations</h2>
       </div>
-      <div class="parent">
+      <div class="cards">
       <div class="card">
       <img src="assets/images/roma.png" alt="">
       <div class="card-list">
@@ -122,12 +131,13 @@
             <span>$15k</span>
            </div>
            <img class="wire" src="assets/icons/Decore.png" alt="">
-
           </div>
       </div>
+      </div>
   </section>
-   <section class="travel">
-   <di class="parent">
+    <section class="travel">
+      <div class="container">
+   <div class="parent">
     <div class="details">
     <span>Easy and Fast</span>
     <h2>Book your next trip <br>
@@ -193,8 +203,10 @@
    </div>
    </div>
     </div>
+    </div>
   </section>
-   <section class="Testimonials">
+    <section class="Testimonials">
+      <div class="container">
     <div class="parent">
     <div class="opinion">
       <span>Testimonials</span>
@@ -217,8 +229,11 @@
      </div>
       </div>
       </div>
+      </div>
   </section>
-   <section class="links">
+    <section class="links">
+      <div class="container">
+        <div class="parent">
       <div class="logos">
      <img src="assets/images/image 27.png" alt="">
       </div>
@@ -234,8 +249,11 @@
 <div class="logos">
 <img src="assets/images/image 31.png" alt="">
 </div>
+</div>
+</div>
   </section>
-   <section class="login">
+    <section class="login">
+      <div class="container">
     <img src="assets/icons/Group 77.png" alt="">
    <div class="login-list">
 <p>Subscribe to get information, latest news and other <br>
@@ -246,9 +264,11 @@
    </div>
    <img src="assets/images/Group 4.png" alt="">
    </div>
+   </div>
   </section>
-   <section class="footer">
-<div class="parent">
+    <section class="footer">
+      <div class="container">
+<div class="cards">
 <div class="title">
 <h2>Jadoo.</h2>
 <p>Book your trip in minute, get full <br>
@@ -293,7 +313,8 @@
 </div>
 </div>
 <span class="link">All rights reserved@jadoo.co</span>
-  </section>   
-<script src="assets/styles/main.js"></script>
+  </div>
+</section>    
+  </main>
   </body>
 </html>

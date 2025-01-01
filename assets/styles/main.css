@@ -6,15 +6,6 @@
 body{
   background-color:#fcfcfc;
 }
-i.fa-solid.fa-bars.menu{
-  color: white;
-  display: none;
-} 
-.header{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .container{
   padding: 0 15px;
   margin: auto;
@@ -34,18 +25,73 @@ i.fa-solid.fa-bars.menu{
      width: 1170px; 
   }
 }
-header nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+header nav input{
+  appearance: none;
 }
-nav ul li{
-  display: inline-block;
-  margin: 0 19px;
-}
-.container{
-  padding: 40px;
-}
+@media (max-width:991px){
+  header nav{
+    position: relative;
+  }
+    header nav input:checked + ul{
+      display: block;
+    }
+    header nav ul{
+      display: none;
+      position: absolute;
+      top:50px;
+      right: 0;
+      min-width: 250px;
+      border: 1px solid rgb(0 0 0 /0.1);
+      background-color: #fff;
+    }
+    header nav ul li:not(:last-child){
+      border-bottom: 1px solid rgb(0 0 0 /0.1);
+    }
+    header nav ul li a{
+      display: block;
+      padding: 10px;
+      color: var(--black);
+    }
+    .hero,.mika{
+      margin-top: 60px;
+    }
+    .login img{
+   display: none;
+     }
+    }
+  @media (min-width:992px){
+    header nav label,
+    header nav .checkbox{
+  display: none;
+    }
+    header nav ul{
+      display: flex;
+    }
+    header nav ul li{
+      padding: 0 20px;
+    }
+    .col {
+      width: 45%;
+    }
+  }
+  .menu{
+    color:#000;
+    font-size: 30px;
+    cursor: pointer;
+  }
+  header{
+    position: sticky;
+    width:100%;
+    top: 5px;
+    padding: 20px 0;
+    z-index:1;
+  }
+  img {
+    max-width: 100%;
+  }
+  ul {
+    list-style: none;
+  }
 a{
   text-decoration: none;
 }
@@ -64,9 +110,10 @@ select{
   border: none;
   background-color: transparent;
 }
-.about{
-  margin-left: 100px;
-padding: 40px;
+header .container,.hero .container{
+  justify-content: space-between;
+  display: flex; align-items: center;
+  flex-wrap: wrap; 
 }
 .about p{
   font-family: "Poppins", serif;
@@ -111,11 +158,6 @@ border-radius: 10px;
   color: #686D77;
   margin-left: 20px;
 }
-.hero{
- display: flex;
- align-items: center;
- justify-content: space-between;
-}
 .background{
   position: absolute;
   top: 0;
@@ -125,7 +167,7 @@ border-radius: 10px;
 .images img{
   width: 620px;
 }
-.about span{
+.about{
   position: relative;
 }
 .about span::after{
@@ -133,14 +175,12 @@ border-radius: 10px;
   background-image: url(../images/Decore.png);
   height:8px;
   position: absolute;
-  background-repeat: no-repeat;
   width:11vw;
   display:block;
   margin-left: 10vw;
 }
 .services,.info{
   text-align: center;
-  padding: 20px;
 }
 .info span,.opinion span{
   font-family: "Poppins", serif;
@@ -151,7 +191,7 @@ border-radius: 10px;
 .info h2,.details h2,.opinion h2{
   font-family: "Volkhov", serif;
 font-weight: 700;
-font-size: 50px;
+font-size: 40px;
 color:#14183E;
 }
 .category h5,.category-fly h5{
@@ -174,9 +214,17 @@ padding: 5px;
 }
 .parent{
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-between ; align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 40px;
+  padding-top: 60px;
+}
+.cards{
+  display: flex;
+  justify-content:space-evenly ; align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding-top: 60px;
 }
 .category{
   flex-grow: 1;
@@ -201,15 +249,13 @@ flex-grow: 1;
   width:220px;
   border-radius: 24px;
 }
-.travel,.Destinations,.services,.footer{
-  padding: 70px;
+.travel,.Destinations,.services,.footer,.Testimonials,.login{
+  padding: 60px;
 }
 .card{
 padding-bottom: 20px;
 background-color: #fff;
 border-radius: 24px;
-flex-grow: 1;
-width: fit-content;
 }
 .info img{
   position: absolute;
@@ -420,7 +466,7 @@ width: 50px;
 margin-left:-35px;
 }
 .miror{
-  width: 400px;
+  width: 300px;
 z-index: -1;
 height: 150px;
 position: absolute;
@@ -435,17 +481,6 @@ margin-left:40px;
 }
 .logos img{
   width: 150px;
-}
-.logos{
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-grow: 1;
-}
-.links{
-padding: 100px;
-display: flex;
-flex-wrap: wrap;
 }
 .login-list{
   background-color:#DFD7F9;
@@ -471,7 +506,7 @@ margin: auto;
   border-radius: 10px;
   border: 1px solid #fff;
 padding: 10px;
-  width:250px;
+  width:200px;
 height: 50px;
  }
   .login-list button{
@@ -479,7 +514,7 @@ height: 50px;
 color: #fff;
 border-radius: 10px;
 border: 2px solid #FF7D68;
-width: 130px;padding: 12px;
+width: 100px;padding: 12px;
 font-size: 17px;
 font-weight: 700;
  }
@@ -497,15 +532,9 @@ font-weight: 700;
   right:250px; 
 margin-bottom: 280px;
  }
- .links{
-  padding: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
- }
  .login-list img{
   position: absolute;
-  margin-bottom: -270px; z-index: -1; right:100px;
+  margin-bottom: -270px; z-index: -1; right:190px;
   width: 110px;
  }
  .title h2{
@@ -575,45 +604,6 @@ gap: 30px;
   font-weight: 500;
   font-family: "Poppins", serif;
  }
- @media (max-width:600px){
-  .navbar{
-    position: absolute;
-    flex-direction: column;
-    top:18%;
-    background-color: #fff;
-    right:600px;
-    width:200px;
-    border-left:1px solid #fff;
-    text-align: center;
-    height: 70vh;
-    padding: 10px 0;
-    transition: 0.3s ease;
-    z-index: 100;
-  }
-  .navbar a{
-    display: block;
-    width: fit-content;
-    margin: 20px 10px;
-  }
-   .active{
-    right:0px;
-    
-  } 
-i.fa-solid.fa-bars.menu{
-display: block;
-color: #000;
-font-size: 30px;
-display: flex;
-align-items: center;
-justify-content: end;
-}
-.images img{
-  display: none;
-}
-.about{
-  margin-left: 20px;
-}
-}
 @media (max-width:1140px){
   .images img{
     display: none;
